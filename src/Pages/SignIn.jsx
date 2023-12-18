@@ -11,7 +11,6 @@ import * as Yup from 'yup';
 import { Oval } from 'react-loader-spinner';
 import { LogIn } from '../Utils/Auth';
 import { useDispatch } from 'react-redux';
-import { setAccessToken } from '../Utils/Slicer';
 import Logo from '../../public/taskfy3.png'
 import { LocalStorage } from '../Utils/helpers';
 
@@ -44,8 +43,6 @@ const SignIn = () => {
                         accessToken: user.accessToken,
                         userEmail: user.email,
                     });
-                    dispatch(setAccessToken(user.accessToken));
-                    navigate('/home');
                 });
                 setIsLoading(false);
             } catch (error) {

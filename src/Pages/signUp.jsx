@@ -11,7 +11,6 @@ import * as Yup from 'yup'
 import { Oval } from 'react-loader-spinner'
 import { CreateAccount } from '../Utils/Auth'
 import { useDispatch} from 'react-redux'
-import { setAccessToken } from '../Utils/Slicer'
 import { LocalStorage } from '../Utils/helpers'
 import Logo from '../../public/taskfy3.png'
 
@@ -51,7 +50,7 @@ const SignUp = () => {
                             userEmail: results.user.email, 
                             userName: values.username
                         })
-                        dispatch(setAccessToken(results.user.accessToken))
+                        // dispatch(setAccessToken(results.user.accessToken))
                         navigate('/home');
                     })
             setIsLoading(false)

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { SearchBox } from './NavBar'
+import { SearchBox } from "../Components/NavBar.jsx"
 import User from '../../public/images.jpeg'
 import { BsThreeDots } from "react-icons/bs";
-import InviteModal from './Invite-Member-Modal';
+import InviteModal from "../Components/Invite-Member-Modal.jsx";
 
 const Team = ({ name, email, tasks }) => {
     return (
